@@ -18,7 +18,9 @@ read_file <- function(file_name) {
 read_files <- function() {
   files <- list.files("datasciencecoursera//R programming/specdata/", pattern="*.csv", full=TRUE)
   result <- ldply(files, read.csv)
-  na.omit(result)
+  
+  # na.omit(result)
+  result
 }
 
 rows_by_monitors <- function(monitor_ids) {
